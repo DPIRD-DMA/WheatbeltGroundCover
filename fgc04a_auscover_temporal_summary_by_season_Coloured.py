@@ -2,21 +2,25 @@
 Created By: Nick Middleton
 Created For: Department of Primary Industries and Regional Development, Western Australia
 Date: Ocotber 2019
-Purpose: This script analyses seasonal Total Vegetation Cover (TVC) percentage rasters over a user nominated period of time, either
-         1.) FOR A SINGLE SEASON OVER A NUMBER OF YEARS
-         The result are set of rasters that indicate how many times a pixel has a valid pixel value during that period, how
-         many of those valid pixels were below a user nominated threshold and, what this ratio is and opitionally what the median
-         TVC is across that period and how anomalous the final raster in the dates range is from the median.
+      Updated 2021
+Purpose: This script analyses seasonal Total Vegetation Cover (TVC) percentage rasters over a user nominated period of time (single season over a number of years)
+         FOR A SINGLE SEASON OVER A NUMBER OF YEARS
+         The outputs consist of a set of rasters that;
+                  indicate how many times a pixel has a valid pixel value during that period, 
+                  how many of those valid pixels were below a user nominated threshold, 
+                  the ratio of years that a pixel is below the threshold
+                  the median TVC for a pixel across that period, and 
+                  how anomalous the final raster in the dates range is from the median.
          
 Inputs:  Start Year for the analysis (yearStart)
          End year for the analysis (yearEnd)
          Pathway to a folder containing TVC GeoTIFFs (pathIn)
          Pathway to a folder where all outputs will be written (pathOut)
          Pathway to data set to act as a mask for the Analysis (pathMask) OPTIONAL
-         A single season whcihc will be analysed for the years between the start and end years
-         OR
-         Start and and End season that will seee the analysis done for all seasons between the start and end years.
-         A integer percentage threshold cover value
+         A single season whcihc will be analysed for the years between the start and end years (seasonSingle)
+         OR, Start and and End season that will seee the analysis done for all seasons between the start and end years.
+         The pathway and file name to the image used to assess the anomaly, such as the most recent season (anomalyImage)
+         A integer percentage threshold cover value (intThreshold)
 NOTE:
 For more infromation regarding the AusCover data see:
 http://data.auscover.org.au/xwiki/bin/view/Product+pages/Landsat+Seasonal+Fractional+Cover
