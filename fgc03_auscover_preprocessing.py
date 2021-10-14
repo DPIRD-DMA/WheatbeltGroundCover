@@ -2,6 +2,8 @@
 Created By: Nick Middleton
 Created For: Department of Primary Industries and Regional Development, Western Australia
 Date: April 2019
+Updated 2021 (Justin Laycock)
+
 Purpose: This script processes AusCover Landsat Seasonal Fractional Ground cover datasets to create four derived
          raster data sets:
                            Bare Soil percentage (BSpc)
@@ -12,6 +14,14 @@ Purpose: This script processes AusCover Landsat Seasonal Fractional Ground cover
         All values in the output images are between 0 and 100, which differs from the original AusCover where values
         can be less than 0 and greater than 100 for the vegation cover and bare soil data.  Original Auscover data also has 100 added to each band which
         has been subtracted as part of this process.  The final Total Vegetative Percentage cover data has also been truncated at a maximum value of 100.
+
+The user must specify the following input variables:
+         Folder pathway to the imagery to be processed (pathIn)
+	Folder pathway to the save outputs (pathOut)
+	Pathway and file name of a raster mask (pathMask)
+	The nominated start year (yearStart)
+	The nominated last year (yearend) 
+
         
 NOTE:
 For more infromation regarding the AusCover data see:
