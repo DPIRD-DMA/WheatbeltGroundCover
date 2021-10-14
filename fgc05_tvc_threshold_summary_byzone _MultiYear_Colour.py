@@ -1,12 +1,24 @@
 """
-Title: TVC Threshold by Zone
+Title: TVC Threshold by Zone - Individual seasonal analysis
 Created By: Nick Middleton
 Created For: Department of Primary Industries and Regional Development, Wester Australia
 Date: November 2019
-Purpose: This script processes Pre-Processed AusCover Seasonal Fractional Ground cover datasets to create a summary of the proportion of land which is below/between a
-         threshold/s of Total Vegetation Cover percentage based on the polygons in a feature class.  The product of the analysis is a table (duplicated in .dbf & .xls) which contain
-         the unique identifier for the input polygon, the area in each class range(that was not NULL), the total area assessed (that was not NULL) and the percentage of land in each class range.
-         
+Updated 2021   (Justin Laycock)
+Purpose: The primary purpose of the following procedure is to produce data to answer three questions:
+         1.	How much of a landscape is above/below a given groundcover target, or between two cover intervals?
+         2.	Where in the landscape do you find groundcover above/below a groundcover target, or between two cover thresholds?
+         3.	What is the difference between one year/season and another or the median of a set time period?
+
+         This script processes Pre-Processed AusCover Seasonal Fractional Groundcover datasets to create a summary of the proportion
+         of land that is below/between a threshold/s of Total Vegetation Cover percentage based on the polygons in a feature class. 
+         A single or range of percentage vegetation cover threshold must be specified to create threshold classes for processing. For instance,
+         [50,70] will become 0-50%, 51-70% and 71-100% cover classes.
+         The per cent of land in each cover class for a polygon feature is possible by specifying the pathway to the polygon layer, and the field name. 
+         The product of the analysis is a table (duplicated in .dbf & .xls) which contain the unique identifier for the input polygon, 
+         the area in each class range (that was not NULL), the total area assessed (that was not NULL) and the area as hectares with the threshold value as headers.
+         The output raster is coloured using a .clr file that specifies the pixel value and the RGB colour  (i.e. 1 166 97 26)
+ 
+     
 Inputs:  A percentage to vegetation cover threshold ("lsTVCThreshold") OR range of thresholds
                 There may be one or more thresholds and the program will create classes to be assessed based on these thresholds
                 For instance if the following ise used for thresholds [40,70] then:
@@ -17,12 +29,14 @@ Inputs:  A percentage to vegetation cover threshold ("lsTVCThreshold") OR range 
          A raster data set containing values of percentage total vegetative ground cover ("pathTVC")
          A data set (raster or polygon) to be used as a mask for the analysis ("pathMask")
              -Note: pathTVC is used as a maks if pathMask is not specified.
+         Pathway to the .clr file to colour the image
 
 Outputs: A table (duplicated as tabulate_records.xls & tabulate_records.dbf )
               -The unique polygon identifier "VALUE"
               -The area under each class VALUE_1..VALUE_X (depending on how many classes are specified).  Area units will be in square metres.
               -The total area assessed (may not match polygon due to null values in "pathTVC") in square metres
-              -The percentage of land with a total vegetative cover in the range for the class from "area_1pc" to "area_Xpc (where X is the uppermost class nominated)
+              -The tabulated outputs includes both the area in m2 and Hectares. However, it is recommended that the per cent value is used for 
+               comparison as the total area is not consistent through time.
         A log file (log.txt) which holds metadata about the analysis.
 
               NOTE:  The area generated will be in square meters based on the projection of the FGC data (Australian Albers).  The area represents the
