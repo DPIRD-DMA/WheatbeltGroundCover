@@ -11,7 +11,7 @@ Script 4) Temporal summary of groundcover
 Script 5) Percent of landscape that is below/between/above a threshold   
 
 #### Other information
-Thankyou to Nick Middleton for developing the scripts and providign us with guidance and support:  
+Thankyou to Nick Middleton for developing the scripts and providing us with guidance and support:  
 https://au.linkedin.com/in/nick-middleton-6595441b  
 Please acknowledge the use of this code when and where appropriate  
 
