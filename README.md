@@ -1,5 +1,5 @@
 # Wheatbelt GroundCover
-Vegetative groundcover is the primary defence against wind and water erosion. These scripts process Landsat satellite fractional groundcover imagery and used to estimate the erosion hazard of soils in Western Australia
+Vegetative groundcover is the primary defence against wind and water erosion. These scripts process Landsat satellite fractional groundcover imagery that are used to estimate the erosion hazard of soils in Western Australia
 
 ### Field Validation  
 Script 1) Produce coordinates for the 8 pixels surrounding a field validaiton site  
