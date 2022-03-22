@@ -11,8 +11,11 @@ Script 4) Temporal summary of groundcover
 Script 5) Percent of landscape that is below/between/above a threshold   
 
 #### Other information
-Thankyou to Nick Middleton for developing the scripts and providign us with guidance and support: https://au.linkedin.com/in/nick-middleton-6595441b
+Thankyou to Nick Middleton for developing the scripts and providign us with guidance and support:  
+https://au.linkedin.com/in/nick-middleton-6595441b  
 Please acknowledge the use of this code when and where appropriate  
 
 For Further information please contact Justin Laycock  
-justin.laycock@dpird.wa.gov.au
+justin.laycock@dpird.wa.gov.au  
+<img src="https://user-images.githubusercontent.com/66045415/159401574-2bc4ccc6-39e0-4827-9274-ded97839a87f.png" width="350">
+
