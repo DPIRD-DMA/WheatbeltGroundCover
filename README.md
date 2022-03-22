@@ -6,9 +6,12 @@ Script 1) Produce coordinates for the 8 pixels surrounding a field validaiton si
 Script 2) Extract the Fractional groundcover data for the field site 
 
 ### Wheatbelt Groundcover  
-Script 3) preprocessing of multiband fractional groundcover imagery  
+Script 3) Preprocessing of multiband fractional groundcover imagery  
 Script 4) Temporal summary of groundcover  
 Script 5) Percent of landscape that is below/between/above a threshold   
+
+### Secondary Statisic calculation
+Script 6) Calculate values for a Box and Whisker plot
 
 #### Other information
 Thankyou to Nick Middleton for developing the scripts and providing us with guidance and support:  
