@@ -7,8 +7,8 @@ Script 2) Extract the Fractional groundcover data for the field site
 
 ### Wheatbelt Groundcover  
 Script 3) Preprocessing of multiband fractional groundcover imagery  
-Script 4) Temporal summary of groundcover  
-Script 5) Percent of landscape that is below/between/above a threshold   
+Script 4) Percent of landscape that is below/between/above a threshold
+Script 5) Temporal summary of groundcover by season
 
 ### Secondary Statisic calculation
 Script 6) Calculate values for a Box and Whisker plot
